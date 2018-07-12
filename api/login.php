@@ -29,7 +29,7 @@ if (isset($_REQUEST['adminusername']) && isset($_REQUEST['adminpassword'])) {
                 ));
             }
             catch (\Exception $e) {
-                print_r($e);
+               // print_r($e);
                 echo json_encode(array(
                     'status' => 'error'
                 ));

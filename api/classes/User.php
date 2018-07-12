@@ -47,10 +47,10 @@ class User{
                     parentcode=:parentcode, createdat=:createdat";
      
         // prepare query
-        $stmt = $this->conn->prepare($query);
+        $stmt = $this->connection->prepare($query);
      
         // sanitize
-        $this->username     =   htmlspecialchars(strip_tags($this->username));
+    /*    $this->username     =   htmlspecialchars(strip_tags($this->username));
         $this->icnumber     =   htmlspecialchars(strip_tags($this->icnumber));
         $this->firstname    =   htmlspecialchars(strip_tags($this->firstname));
         $this->lastname     =   htmlspecialchars(strip_tags($this->lastname));
@@ -66,7 +66,7 @@ class User{
         $this->gender       =   htmlspecialchars(strip_tags($this->gender));
         $this->dob          =   htmlspecialchars(strip_tags($this->dob));
         $this->race         =   htmlspecialchars(strip_tags($this->race));
-        $this->parentcode   =   htmlspecialchars(strip_tags($this->parendcode));
+        $this->parentcode   =   htmlspecialchars(strip_tags($this->parentcode));*/
      
         // bind values
         $stmt->bindParam(":username",   $this->username);
@@ -87,7 +87,8 @@ class User{
         $stmt->bindParam(":race",       $this->race);
         $stmt->bindParam(":parentcode", $this->parentcode);
         $stmt->bindParam(":createdat",  $this->createdat);
-     
+        
+        //echo json_encode( $this->connection->errorInfo() ); exit;
         // execute query
         if($stmt->execute()){
             return true;
