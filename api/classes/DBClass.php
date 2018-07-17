@@ -4,7 +4,7 @@ class DBClass {
     private $host = "localhost";
     private $username = "root";
     private $password = "";
-    private $database = "ratna_db3";
+    private $database = "ratna_db";
 
     public $connection;
 
