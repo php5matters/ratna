@@ -3,7 +3,7 @@
  // {"email": "", "mobile":"", "subject": "", "message":""}
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST");
-//header("Content-Type: application/json; charset=UTF-8");
+header("Content-Type: application/json; charset=UTF-8");
 
 include('classes/DBClass.php');
 include('classes/Mailer.php');
