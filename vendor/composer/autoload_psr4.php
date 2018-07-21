@@ -12,5 +12,6 @@ return array(
     'ReallySimpleJWT\\Helper\\' => array($vendorDir . '/rbdwllr/reallysimplejwt/src/Helper'),
     'ReallySimpleJWT\\Exception\\' => array($vendorDir . '/rbdwllr/reallysimplejwt/src/Exception'),
     'ReallySimpleJWT\\' => array($vendorDir . '/rbdwllr/reallysimplejwt/src'),
+    'PHPMailer\\PHPMailer\\' => array($vendorDir . '/phpmailer/phpmailer/src'),
     'Carbon\\' => array($vendorDir . '/nesbot/carbon/src/Carbon'),
 );

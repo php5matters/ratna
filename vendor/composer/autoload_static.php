@@ -26,6 +26,10 @@ class ComposerStaticInit83d3a3d4f590ceaa1ab33a654e8ec944
             'ReallySimpleJWT\\Exception\\' => 26,
             'ReallySimpleJWT\\' => 16,
         ),
+        'P' => 
+        array (
+            'PHPMailer\\PHPMailer\\' => 20,
+        ),
         'C' => 
         array (
             'Carbon\\' => 7,
@@ -56,6 +60,10 @@ class ComposerStaticInit83d3a3d4f590ceaa1ab33a654e8ec944
         'ReallySimpleJWT\\' => 
         array (
             0 => __DIR__ . '/..' . '/rbdwllr/reallysimplejwt/src',
+        ),
+        'PHPMailer\\PHPMailer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
         ),
         'Carbon\\' => 
         array (
