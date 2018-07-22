@@ -13,24 +13,24 @@ include('classes/Mailer.php');
 
 	$data = json_decode(file_get_contents("php://input"));
 	if($data == NULL) {
-		$email   = $_POST['email'];
-		$mobile  = $_POST['mobile'];
-		$subject = $_POST['subject'];
-		$message = $_POST['message'];
+		$email   = $_POST['customeremail'];
+		$mobile  = $_POST['customeremobile'];
 	} else {
-		$email   = $data->email;
-		$mobile  = $data->mobile;
-		$subject = $data->subject;
-		$message = $data->message;		
+		$email   = $data->customeremail;
+		$mobile  = $data->customeremobile;
 	}
 	
-	$query = "SELECT * FROM user_dealer WHERE email='" . $email . "' AND phonenumber='".$mobile."'"; //echo $query;
+	$subject = "ForgotPassword, ".$email.", ".$mobile;
+	$message = "ForgotPassword, ".$email.", ".$mobile;
+	$toEmail = "gopay.admin@tunetalk.com";
+
+	$query = "SELECT * FROM user_dealer WHERE email='" . $email . "' AND phonenumber='".$mobile."'";
 	$stmt = $connection->prepare($query);
 	$stmt->execute();
 	$count = $stmt->rowCount();
 	if ($count) {
 
-	  if(sendemail($email, $subject, $message)){
+	  if(sendemail($toEmail, $subject, $message)){
 			echo '{';
 				echo '"message": "Email sent successfully.", "status": 1';
 			echo '}';
