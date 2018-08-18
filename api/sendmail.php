@@ -14,10 +14,10 @@ include('classes/Mailer.php');
 	$data = json_decode(file_get_contents("php://input"));
 	if($data == NULL) {
 		$email   = $_POST['customeremail'];
-		$mobile  = $_POST['customeremobile'];
+		$mobile  = $_POST['customermobile'];
 	} else {
 		$email   = $data->customeremail;
-		$mobile  = $data->customeremobile;
+		$mobile  = $data->customermobile;
 	}
 	
 	$subject = "ForgotPassword, ".$email.", ".$mobile;
